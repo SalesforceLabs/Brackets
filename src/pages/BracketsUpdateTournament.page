@@ -1,0 +1,3 @@
+<apex:page cache="false" showHeader="false" sidebar="false" contentType="text/plain" controller="BracketsSitesTournamentPublisher">
+    <apex:outputText value="{!outputXml}"/>
+</apex:page>

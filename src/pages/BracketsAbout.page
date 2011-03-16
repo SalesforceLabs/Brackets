@@ -17,7 +17,20 @@
     <p>Have questions?  Please post them to <a href="http://success.salesforce.com/search?type=Answer&filter=a1P30000000LKc1EAG">Salesforce Answers</a>.</p>
     
     </apex:pageBlock>
-    
+   
+    <apex:pageBlock title="Handy Links" rendered="{!isCompleteStep2}">
+
+        <ul>
+            <li><apex:outputLink value="{!$Page.BracketsScoreBoard}">All Tournament, All Groups Leaderboard</apex:outputLink></li>
+            <li><apex:outputLink value="{!$Page.BracketsImportTournament}">Import Tournament Page - Also Use For Updates</apex:outputLink></li>
+            <li><apex:outputLink value="{!URLFOR('/'+$ObjectType.Brackets_Tournament__c.KeyPrefix+'/l')}">Tournaments</apex:outputLink> - List all Tournaments.</li>
+            <li><apex:outputLink value="{!URLFOR('/'+$ObjectType.Brackets_Group__c.KeyPrefix+'/l')}">Pools</apex:outputLink> - List all Pools.</li>
+            <li><apex:outputLink value="{!URLFOR('/'+$ObjectType.Brackets_Team__c.KeyPrefix+'/l')}">Teams</apex:outputLink> - List all Teams.</li>
+        </ul>
+
+    </apex:pageBlock>
+   
+
     <div style="float: left; width: 48%;">
     <apex:pageBlock id="AboutBlockStep1" title="Step 1: Today">
         <apex:outputPanel layout="block" >
@@ -190,13 +203,14 @@
     
     </apex:pageBlock>
 
-    <apex:pageBlock title="Handy Links">
+    <apex:pageBlock title="Handy Links" >
 
         <ul>
             <li><apex:outputLink value="{!$Page.BracketsScoreBoard}">All Tournament, All Groups Leaderboard</apex:outputLink></li>
             <li><apex:outputLink value="{!$Page.BracketsImportTournament}">Import Tournament Page - Also Use For Updates</apex:outputLink></li>
             <li><apex:outputLink value="{!URLFOR('/'+$ObjectType.Brackets_Tournament__c.KeyPrefix+'/l')}">Tournaments</apex:outputLink> - List all Tournaments.</li>
             <li><apex:outputLink value="{!URLFOR('/'+$ObjectType.Brackets_Group__c.KeyPrefix+'/l')}">Pools</apex:outputLink> - List all Pools.</li>
+            <li><apex:outputLink value="{!URLFOR('/'+$ObjectType.Brackets_Team__c.KeyPrefix+'/l')}">Teams</apex:outputLink> - List all Teams.</li>
         </ul>
 
     </apex:pageBlock>

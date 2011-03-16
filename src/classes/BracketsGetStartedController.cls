@@ -55,6 +55,10 @@ public with sharing class BracketsGetStartedController {
       this.isCompleteStep1 = true;
 
     }
+    
+    if (settings != null && settings.Initial_Setup_Step_2_Complete__c) {
+    	this.isCompleteStep2 = true;
+    }
         }
         
         public void getStarted() {
@@ -151,7 +155,7 @@ public with sharing class BracketsGetStartedController {
                     if (settings == null) {
                         settings = new BracketsSettingsPersonal__c();
                     }
-                    settings.Initial_Setup_Complete__c = true;
+                    settings.Initial_Setup_Step_2_Complete__c = true;
                     upsert settings;
     
                     this.isCompleteStep2 = true;
